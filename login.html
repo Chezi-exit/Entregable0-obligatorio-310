@@ -2,13 +2,14 @@
 <html lang="es">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>eMercado - Todo lo que busques está aquí</title>
-  
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <title>eMercado - Login y Registro</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700,900" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+
   <style>
     body {
       background-color: rgb(248, 249, 250);
@@ -19,20 +20,91 @@
 <body>
   <main class="mt-5">
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      <!-- Nav Tabs -->
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button"
+            role="tab">Login</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="registro-tab" data-bs-toggle="tab" data-bs-target="#registro" type="button"
+            role="tab">Registro</button>
+        </li>
+      </ul>
+
+      <!-- Contenido de cada pestaña -->
+      <div class="tab-content mt-4" id="myTabContent">
+        
+        <!-- Sección Login -->
+        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+          <div class="alert alert-danger text-center" role="alert">
+            <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+          </div>
+        </div>
+
+        <!-- Sección Registro -->
+        <div class="tab-pane fade" id="registro" role="tabpanel" aria-labelledby="registro-tab">
+          <div class="row mt-4">
+            <div class="col">
+              <h1 class="mb-3">Registro</h1>
+              <hr class="my-4">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre">
+                </div>
+                <div class="col-sm-6">
+                  <label for="apellido" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" id="apellido">
+                </div>
+                <div class="col-12">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email">
+                </div>
+                <div class="col-sm-6">
+                  <label for="password1" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="password1">
+                </div>
+                <div class="col-sm-6">
+                  <label for="password2" class="form-label">Repetir contraseña</label>
+                  <input type="password" class="form-control" id="password2">
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="terminos">
+                  <label class="form-check-label" for="terminos">Acepto los términos y condiciones del servicio.</label>
+                </div>
+                <button class="btn btn-primary mt-3" type="button" id="regBtn">Registrarme</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </main>
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-end">
-        <a href="#">Volver arriba</a>
-      </p>
-      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a></p>
-    </div>
+
+  <!-- Footer -->
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jóvenes a
+        Programar</a></p>
+    <p class="mb-1">Es un sitio generado con fines estrictamente educativos. No realiza registros ni guarda datos de
+      ningún tipo.</p>
   </footer>
+
+  <!-- Alertas de Registro -->
+  <div class="alert alert-success alert-dismissible fade" role="alert" id="alert-success">
+    <p>Datos guardados correctamente</p>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <div class="alert alert-danger alert-dismissible fade" role="alert" id="alert-danger">
+    <p>Los datos ingresados no cumplen con los requisitos solicitados</p>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/login.js"></script>
+  <script src="js/validacion.js"></script>
 </body>
 
 </html>
